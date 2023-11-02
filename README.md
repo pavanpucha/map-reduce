@@ -1,2 +1,1 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+Dart implementation of Map Reduce. Most of it is borrowed from 'https://pdos.csail.mit.edu/6.824/labs/lab-mr.html'
