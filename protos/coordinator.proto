@@ -1,0 +1,17 @@
+syntax = "proto3";
+package map_reduce;
+
+// All the services that fall under coordinator
+service Coordinator {
+    // Coordinator 
+    rpc AssignTask(MapJobs) returns (ReduceOutput) {}
+}
+
+message MapJobs {
+    string name = 1;
+
+}
+
+message ReduceOutput {
+    string output = 1 ; 
+}
