@@ -10,15 +10,24 @@ abstract class CoordinatorInterface{
 
 }
 
-// String parseClient(String name){
-  
-// }
-
 class CoorninatorService extends CoordinatorServiceBase {
   @override
   Future<ReduceOutput> assignTask(ServiceCall call, MapJobs request) async {
+    print("Call address");
+    
+    print(call.remoteAddress!.address);
+    print(call.toString());
+
+    
     return ReduceOutput()..output = "reduced output ${request.name}";
   }
+
+  @override
+  Stream<ReduceOutput> streamToWorker(ServiceCall call, MapJobs request) async* {
+
+  }
+
+ 
 }
 
 Future<void> main(List<String> args) async {
