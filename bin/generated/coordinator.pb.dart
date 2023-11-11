@@ -63,6 +63,56 @@ class MapJobs extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+class StrMsg extends $pb.GeneratedMessage {
+  factory StrMsg({
+    $core.String? message,
+  }) {
+    final $result = create();
+    if (message != null) {
+      $result.message = message;
+    }
+    return $result;
+  }
+  StrMsg._() : super();
+  factory StrMsg.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory StrMsg.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'StrMsg', package: const $pb.PackageName(_omitMessageNames ? '' : 'map_reduce'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'message')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  StrMsg clone() => StrMsg()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  StrMsg copyWith(void Function(StrMsg) updates) => super.copyWith((message) => updates(message as StrMsg)) as StrMsg;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static StrMsg create() => StrMsg._();
+  StrMsg createEmptyInstance() => create();
+  static $pb.PbList<StrMsg> createRepeated() => $pb.PbList<StrMsg>();
+  @$core.pragma('dart2js:noInline')
+  static StrMsg getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<StrMsg>(create);
+  static StrMsg? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get message => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set message($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasMessage() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMessage() => clearField(1);
+}
+
 class ReduceOutput extends $pb.GeneratedMessage {
   factory ReduceOutput({
     $core.String? output,

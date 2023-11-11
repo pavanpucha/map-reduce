@@ -25,6 +25,18 @@ const MapJobs$json = {
 final $typed_data.Uint8List mapJobsDescriptor = $convert.base64Decode(
     'CgdNYXBKb2JzEhIKBG5hbWUYASABKAlSBG5hbWU=');
 
+@$core.Deprecated('Use strMsgDescriptor instead')
+const StrMsg$json = {
+  '1': 'StrMsg',
+  '2': [
+    {'1': 'message', '3': 1, '4': 1, '5': 9, '10': 'message'},
+  ],
+};
+
+/// Descriptor for `StrMsg`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List strMsgDescriptor = $convert.base64Decode(
+    'CgZTdHJNc2cSGAoHbWVzc2FnZRgBIAEoCVIHbWVzc2FnZQ==');
+
 @$core.Deprecated('Use reduceOutputDescriptor instead')
 const ReduceOutput$json = {
   '1': 'ReduceOutput',

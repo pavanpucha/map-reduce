@@ -5,11 +5,19 @@ package map_reduce;
 service Coordinator {
     // Coordinator 
     rpc AssignTask(MapJobs) returns (ReduceOutput) {}
+
+    rpc StreamToWorker(MapJobs) returns (stream StrMsg){}
+
+    rpc BiDir(stream StrMsg) returns (stream StrMsg){}
 }
 
 message MapJobs {
     string name = 1;
 
+}
+
+message StrMsg{
+    string message = 1;
 }
 
 message ReduceOutput {
